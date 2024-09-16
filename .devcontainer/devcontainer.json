@@ -19,6 +19,19 @@
 	},
 
 	"customizations": {
+		"vscode": {
+			"extensions": [
+				"DavidAnson.vscode-markdownlint",
+				"Mikhail-Arkhipov.r",
+				"mechatroner.rainbow-csv",
+				"TianyiShi.rmarkdown",
+				"hridoy.r-development",
+				"Ikuyadeu.r-pack",
+				"oderwat.indent-rainbow",
+				"meakbiyik.vscode-r-test-adapter",
+				"dracula-theme.theme-dracula"
+			]
+		}
 		//"vscode": {
 		//	"extensions": [
 		//		// Add Jupyter and Python vscode extensions
