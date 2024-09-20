@@ -13,8 +13,13 @@ RUN install2.r --error --skipinstalled -n -1 \
         httpgd \ 
         languageserver \
         lintr \
+        renv \
     && rm -rf /tmp/downloaded_packages \
     && R -q -e 'remotes::install_github("https://github.com/dcomtois/summarytools/tree/0-8-9")'
+
+# Copy renv.lock file into the container
+COPY renv.lock /home/rstudio/renv.lock
+RUN R -q -e "renv::restore()"
 
 # Install Python packages
 COPY requirements.txt /tmp/pip-tmp/
